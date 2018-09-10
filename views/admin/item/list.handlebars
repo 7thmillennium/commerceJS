@@ -1,0 +1,52 @@
+<div class="container">
+     {{#if messages.success}}
+    <div class="text-success">
+        {{#each messages.success}}
+        <div>{{msg}}</div>
+        {{/each}}
+    </div>
+    {{/if}} {{#if messages.error}}
+    <div class="text-danger">
+        {{#each messages.error}}
+        <div>{{msg}}</div>
+        {{/each}}
+    </div>
+    {{/if}} {{#if messages.info}}
+    <div class="text-info">
+        {{#each messages.info}}
+        <div>{{msg}}</div>
+        {{/each}}
+    </div>
+    {{/if}}
+
+    <div>
+        <h1>
+            Read Entry
+        </h1>
+    </div>
+    {{}}
+    {{#each item}}
+    {{item}}
+    <div>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" value="{{item.name}}" readonly>
+                <label for="info">Info</label>
+                <textarea name="info" id="info" cols="30" rows="10" readonly>{{item.info}}</textarea>
+                <label for="category">Type</label>
+                <input type="text" name="type" id="type" value="{{item.type}}" readonly>
+                <label for="category">Category</label>
+                <input type="text" name="category" id="category" value="{{item.category}}" readonly>
+                <label for="price">Price</label>
+                <input type="number" name="price" id="price" value="{{item.price}}" readonly>
+                <label for="social_link">Facebook link</label>
+                <input type="text" name="social_link" id="social_link" value="{{item.social_link}}" readonly>
+                <br>
+                <br>
+                <a href="/admin/item/update">Edit</a>
+                <a href="/admin/item/delete">Delete</a>
+            </form>
+            <hr>
+    </div>
+    {{/each}}
+</div>

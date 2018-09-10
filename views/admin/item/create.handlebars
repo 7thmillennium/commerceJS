@@ -1,0 +1,40 @@
+<div class="container">
+    <div>
+        <h1>
+            Create Entry
+        </h1>
+    </div>
+
+    <div>
+        <form action="/admin/item/create/" method="post">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="info">Info</label>
+            <textarea name="info" id="info" cols="30" rows="10">Type description here</textarea>
+            <label for="category">Type</label>
+            <select name="type" id="type">
+                <option value="house">House</option>
+                <option value="condo">Condo</option>
+                <option value="land">Land</option>
+            </select>
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="condo">condo</option>
+                <option value="rowhouse">rowhouse</option>
+                <option value="townhouse">townhouse</option>
+                <option value="single">single</option>
+                <option value="duplex">duplex</option>
+                <option value="triplex">triplex</option>
+                <option value="quadrouple">house</option>
+            </select>
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price">
+            <label for="social_link">Facebook link</label>
+            <input type="text" name="social_link" id="social_link">
+            <br>
+            <button>Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>
+<br>
